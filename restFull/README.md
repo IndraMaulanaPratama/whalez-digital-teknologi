@@ -83,7 +83,7 @@ Uncomment line sync database
 // db.sync({alter: true})
 ```
 
-Buat Database dengan nama whaze_movie
+Buat Database dengan nama whalez_movie
 ```
 create database whaze_movie
 ```
@@ -98,6 +98,7 @@ npm start
 
 # CREDIT
 Anda datap hubungi saya di:
+
 [![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/message/K53BUSB6NENUH1)
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/wirahmarama)
 
