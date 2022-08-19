@@ -1,0 +1,64 @@
+### Welcome Page
+GET http://127.0.0.1:8027/
+
+### Auth Router
+GET http://127.0.0.1:8027/auth
+
+### Auth Get All User
+GET http://127.0.0.1:8027/auth/users
+
+### Auth Signup
+POST http://127.0.0.1:8027/auth/users
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "email": "user1@email.com",
+    "password": "password@user1"
+}
+
+### Auth SignIn
+POST http://127.0.0.1:8027/auth/signin
+Content-Type: application/json
+
+{
+    "username": "user1",
+    "password": "password@user1"
+}
+
+### Auth Reset Password
+PUT http://127.0.0.1:8027/auth/users
+Content-Type: application/json
+
+{
+    "email": "user1@email.com",
+    "password": "password@user1new",
+    "new_password" : "password@user1"
+}
+
+### Auth Forgot Password
+POST http://127.0.0.1:8027/auth/forgot_password
+Content-Type: application/json
+
+{
+    "email": "user1@email.com"
+}
+
+### Auth Delete User -- Please Save using this service 
+DELETE  http://127.0.0.1:8027/auth/users/onlyAdmin/whalez-teknologi/user1@email.com
+
+### Auth Disable User
+PUT http://127.0.0.1:8027/auth/users/disable_user
+Content-Type: application/json
+
+{
+    "email": "user1@email.com"
+}
+
+### Auth Activate User
+PUT http://127.0.0.1:8027/auth/users/activate_user
+Content-Type: application/json
+
+{
+    "email": "user1@email.com"
+}
