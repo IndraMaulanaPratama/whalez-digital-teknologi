@@ -21,6 +21,7 @@ Aplikasi ini dibuat untuk memenuhi test recruitment pegawai PT. Whalez Digital T
 ![VSCODE](https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 # FITURE YANG DIBUAT
+```
 - Authentication
 -- SignUP
 -- SignIn
@@ -33,6 +34,7 @@ Aplikasi ini dibuat untuk memenuhi test recruitment pegawai PT. Whalez Digital T
 --Update Movie
 -- Delete Movie
 -- Disable Movie (Soft Delete)
+```
 
 # DEPENDENCIES YANG DIGUNAKAN
 - bcrypt: ^5.0.1,
