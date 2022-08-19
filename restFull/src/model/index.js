@@ -1,10 +1,12 @@
 const {Sequelize} = require('sequelize');
 const db = require('../config/connection');
-
+const Movie = require('./MovieModel');
 const User = require("./UserModel");
 
+
 const modelDb = {
-    User
+    User,
+    Movie,
 }
 
 // *** Uncomment to syncronize model to database *** //

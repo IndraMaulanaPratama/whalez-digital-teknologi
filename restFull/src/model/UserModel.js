@@ -13,14 +13,12 @@ const User = db.define('user', {
     username: {
         type: DataTypes.STRING(100),
         allowNull: false,
-        unique: true,
         comment: `Username yang digunakan oleh user`
     },
 
     email: {
         type: DataTypes.STRING(150),
         allowNull:false,
-        unique: true,
         comment: `Email yang digunakan oleh user`
     },
 

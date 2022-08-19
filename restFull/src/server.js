@@ -13,6 +13,7 @@ app.use(express.urlencoded( {extended:true} ))
 app.use(express.json())
 
 app.use('/auth', appRouter.auth)
+app.use('/movie', appRouter.movie)
 app.get('/', (req, res) => {res.status(200).json('Selamat Datang')})
 
 app.listen(port, () => {

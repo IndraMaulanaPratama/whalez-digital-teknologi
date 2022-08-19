@@ -1,6 +1,10 @@
 ### Welcome Page
 GET http://127.0.0.1:8027/
 
+
+
+// *** END OF AUTHENTICATION ZONE *** //
+
 ### Auth Router
 GET http://127.0.0.1:8027/auth
 
@@ -62,3 +66,49 @@ Content-Type: application/json
 {
     "email": "user1@email.com"
 }
+
+// *** END OF AUTHENTICATION ZONE *** //
+
+
+
+
+// *** MOVIE ZONE *** //
+
+### Movie Route
+GET http://127.0.0.1:8027/movie/
+
+### Movie Get All
+GET http://127.0.0.1:8027/movie/list
+
+### Movie Create
+POST http://127.0.0.1:8027/movie
+Content-Type: application/json
+
+{
+    "nama_movie" : "Movie 10",
+    "sutradara" : "Arifin C. Noer",
+    "tahun_rilis" : "1984",
+    "sinopsis" : "Penumpasan Pengkhianatan G 30 S PKI atau hanya Pengkhianatan G 30 S PKI adalah judul film dokudrama propaganda Indonesia tahun 1984. Film ini disutradarai dan ditulis oleh Arifin C. Noer, diproduseri oleh G. Dwipayana, dan dibintangi Amoroso Katamsi, Umar Kayam, dan Syubah Asa."
+}
+
+### Movie Update
+PUT http://127.0.0.1:8027/movie/1
+Content-Type: application/json
+
+{
+    "nama_movie" : "G30SPKI",
+    "sutradara" : "Arifin C. Noer",
+    "tahun_rilis" : "1984",
+    "sinopsis" : "Penumpasan Pengkhianatan G 30 S PKI atau hanya Pengkhianatan G 30 S PKI adalah judul film dokudrama propaganda Indonesia tahun 1984. Film ini disutradarai dan ditulis oleh Arifin C. Noer, diproduseri oleh G. Dwipayana, dan dibintangi Amoroso Katamsi, Umar Kayam, dan Syubah Asa."
+}
+
+### Movie Disable
+PUT http://127.0.0.1:8027/movie/disable/1
+
+### Movie Activate
+PUT http://127.0.0.1:8027/movie/activate/1
+
+### Movie Delete
+DELETE http://127.0.0.1:8027/movie/onlyAdmin/whalez-teknologi/1
+
+// *** END OF MOVIE ZONE *** //
