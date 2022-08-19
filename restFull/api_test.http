@@ -78,7 +78,7 @@ Content-Type: application/json
 GET http://127.0.0.1:8027/movie/
 
 ### Movie Get All
-GET http://127.0.0.1:8027/movie/list
+GET http://127.0.0.1:8027/movie/list?page=2&record=4
 
 ### Movie Create
 POST http://127.0.0.1:8027/movie

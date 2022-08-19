@@ -11,8 +11,38 @@ MovieController.getAll = async (req, res) => {
     let result = {}
     let status = 0
 
+    // Pagination
+    let limit = parseInt(req.query.record) 
+    let page = parseInt(req.query.page)
+    let start = 0 + (page - 1) * limit
+    let end = page * limit 
+
+    console.log(limit)
+    // 
+
     try {
-        result = await modelDb.Movie.findAll()
+        const movie = await modelDb.Movie.findAndCountAll(
+            {
+                order: [['id', 'asc']],
+                limit: limit,
+                offset: start,
+            }
+        )
+        let countFilter = movie.count
+        
+        
+        let pagination = {}
+        pagination.totalRow = movie.count
+        pagination.totalPage = Math.ceil(countFilter / limit)
+
+        if (end < countFilter) {
+            pagination.next = {
+                page: page + 1,
+                limit
+            }
+        }
+
+        result = {data: movie.rows, pagination}
         status = 200
     } catch (error) {
         status = 500
